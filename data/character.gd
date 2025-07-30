@@ -1,4 +1,3 @@
-# res://data/character.gd
 extends Resource
 class_name Character
 
@@ -9,6 +8,7 @@ class_name Character
 @export var max_chi: int = 50
 @export var atk: int = 10
 @export var def: int = 5
+@export var speed: int = 10
 
 # --- Current resources (also saved) ---
 @export var hp: int = 100
