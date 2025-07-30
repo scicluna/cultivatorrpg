@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=4 format=3 uid="uid://06116ll1f3vm"]
+
+[ext_resource type="Script" uid="uid://cfgw017e4idwa" path="res://data/ability_effect.gd" id="1_8g8w4"]
+[ext_resource type="Script" uid="uid://dvhvnybswfe0w" path="res://data/ability.gd" id="2_csj5f"]
+
+[sub_resource type="Resource" id="Resource_8g8w4"]
+script = ExtResource("1_8g8w4")
+type = 2
+element = 0
+is_percent = true
+operation = 1
+power = 20
+duration = 3
+status_id = ""
+stat_id = "\"atk\""
+metadata/_custom_type_script = "uid://cfgw017e4idwa"
+
+[resource]
+script = ExtResource("2_csj5f")
+id = "bolster"
+name = "Bolster"
+description = ""
+hp_cost = 0
+chi_cost = 5
+cooldown = 0
+target_mode = 0
+effects = Array[ExtResource("1_8g8w4")]([SubResource("Resource_8g8w4")])
+metadata/_custom_type_script = "uid://dvhvnybswfe0w"

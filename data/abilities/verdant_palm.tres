@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=5 format=3 uid="uid://bq1i4w36ewnii"]
+
+[ext_resource type="Script" uid="uid://dvhvnybswfe0w" path="res://data/ability.gd" id="1_1l3dg"]
+[ext_resource type="Script" uid="uid://cfgw017e4idwa" path="res://data/ability_effect.gd" id="1_pk13y"]
+
+[sub_resource type="Resource" id="Resource_vcmb7"]
+script = ExtResource("1_pk13y")
+type = 0
+element = 3
+is_percent = false
+operation = 0
+power = 35
+duration = 0
+status_id = ""
+stat_id = ""
+metadata/_custom_type_script = "uid://cfgw017e4idwa"
+
+[sub_resource type="Resource" id="Resource_0o8tp"]
+script = ExtResource("1_pk13y")
+type = 2
+element = 3
+is_percent = false
+operation = 0
+power = 0
+duration = 3
+status_id = "poison"
+stat_id = ""
+metadata/_custom_type_script = "uid://cfgw017e4idwa"
+
+[resource]
+script = ExtResource("1_1l3dg")
+id = "verdant_palm"
+name = "Verdant Palm"
+description = ""
+hp_cost = 0
+chi_cost = 12
+cooldown = 0
+target_mode = 2
+effects = Array[ExtResource("1_pk13y")]([SubResource("Resource_vcmb7"), SubResource("Resource_0o8tp")])

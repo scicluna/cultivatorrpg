@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=4 format=3 uid="uid://dcfgcmfmcl326"]
+
+[ext_resource type="Script" uid="uid://cfgw017e4idwa" path="res://data/ability_effect.gd" id="1_wyx72"]
+[ext_resource type="Script" uid="uid://dvhvnybswfe0w" path="res://data/ability.gd" id="2_38y7e"]
+
+[sub_resource type="Resource" id="Resource_wyx72"]
+script = ExtResource("1_wyx72")
+type = 1
+element = 1
+is_percent = false
+operation = 0
+power = 20
+duration = 0
+status_id = ""
+stat_id = ""
+metadata/_custom_type_script = "uid://cfgw017e4idwa"
+
+[resource]
+script = ExtResource("2_38y7e")
+id = "heal"
+name = "Heal"
+description = ""
+hp_cost = 0
+chi_cost = 10
+cooldown = 0
+target_mode = 1
+effects = Array[ExtResource("1_wyx72")]([SubResource("Resource_wyx72")])
+metadata/_custom_type_script = "uid://dvhvnybswfe0w"
