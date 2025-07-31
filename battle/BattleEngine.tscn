@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bi4h561diocfu"]
+
+[ext_resource type="Script" uid="uid://ddki0oua6d5jh" path="res://battle/battle_engine.gd" id="1_2mlkp"]
+[ext_resource type="Script" uid="uid://do6ltujiewjbt" path="res://battle/ability_runner.gd" id="2_tiqtx"]
+
+[node name="BattleEngine" type="Node"]
+script = ExtResource("1_2mlkp")
+
+[node name="AbilityRunner" type="Node" parent="."]
+script = ExtResource("2_tiqtx")

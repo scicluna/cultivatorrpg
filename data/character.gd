@@ -25,37 +25,11 @@ class_name Character
 @export var kill_counts: Dictionary = {}
 @export var hexes_travelled: int = 0
 
+# --- Combat Buffs/Debuffs/Statuses ---
+@export var statuses: Array[StatusEffect] = []  # ailments/buffs/debuffs
+
 func _validate_property(property: Dictionary) -> void:
 	if property.name == "hp":
 		hp = clamp(hp, 0, max_hp)
 	if property.name == "chi":
 		chi = clamp(chi, 0, max_chi)
-
-func apply_cultivation_node(node: CultivationNode) -> void:
-	if not node:
-		printerr("apply_cultivation_node: node is null")
-		return
-
-	# Stat bonuses
-	for bonus in node.stat_bonuses:
-		var base = self.get(bonus.stat_id)
-		var t = typeof(base)
-		if t != TYPE_INT and t != TYPE_FLOAT:
-			printerr("Cultivation Node: %s has invalid stat_id '%s'" % [node.id, bonus.stat_id])
-			continue
-
-		var new_value: float = base
-		if bonus.is_percent:
-			if bonus.operation == StatBonus.Operation.ADD:
-				new_value = base + base * bonus.value
-			else:  # MULTIPLY
-				new_value = base * bonus.value
-		else:
-			new_value = base + bonus.value
-
-		self.set(bonus.stat_id, new_value)
-
-	# Grant abilities
-	for ab in node.granted_abilities:
-		if ab and ab not in abilities:
-			abilities.append(ab)

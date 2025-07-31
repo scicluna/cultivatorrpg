@@ -11,7 +11,7 @@ class_name CultivationNode
 @export var dao_rank: int = 0
 
 # Stat bonuses
-@export var stat_bonuses: Array[StatBonus] = []
+#@export var stat_bonuses: Array[StatBonus] = []
 
 # Flags for event checks
 @export var flags: Array[String] = []

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=2 format=3 uid="uid://c7s1oxq52guc5"]
+
+[ext_resource type="Script" uid="uid://c2s3vpltsktu2" path="res://data/status_effect.gd" id="1_8xk3d"]
+
+[resource]
+script = ExtResource("1_8xk3d")
+id = "poison"
+name = "Poison"
+is_debuff = true
+max_stacks = 1
+metadata/_custom_type_script = "uid://c2s3vpltsktu2"
